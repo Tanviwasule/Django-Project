@@ -1,0 +1,138 @@
+{% extends 'base.html' %}
+{% block content %}
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f7f7f7;
+    }
+
+    .banner {
+      background: #ffe066;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px;
+      flex-wrap: wrap;
+    }
+
+    .banner-text {
+      max-width: 50%;
+    }
+
+    .banner-text h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .banner-text p {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .banner-text button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background: #ff9900;
+      border: none;
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .banner img {
+      width: 300px;
+      height: auto;
+      max-width: 100%;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      padding: 30px;
+    }
+
+    .card {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      text-align: center;
+      padding: 20px;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border-radius: 4px;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #0073e6;
+      font-weight: bold;
+    }
+  </style>
+
+<body>
+
+  <div class="banner">
+    <div class="banner-text">
+      <h2>Track Your Orders</h2>
+      <p>View, manage, and return your Amazon orders with ease.</p>
+      <button>Go to Your Orders</button>
+    </div>
+    <img src="https://m.media-amazon.com/images/G/01/x-locale/common/merch/orders/orders_banner.jpg" alt="Orders Banner">
+  </div>
+
+  <div class="grid-container">
+    <div class="card">
+      <h3>Check Order Status</h3>
+      <img src="https://m.media-amazon.com/images/I/61y2VVWcGBL._AC_SL1500_.jpg" alt="Order Status">
+      <p>See where your package is and when it will arrive.</p>
+      <a href="#">Track Now</a>
+    </div>
+    
+    <div class="card">
+      <h3>Return or Replace Items</h3>
+      <img src="https://m.media-amazon.com/images/I/71kaDKt3qfL._AC_SL1500_.jpg" alt="Return Items">
+      <p>Return items or exchange for a replacement easily.</p>
+      <a href="#">Start a Return</a>
+    </div>
+
+    <div class="card">
+      <h3>Order History</h3>
+      <img src="https://m.media-amazon.com/images/I/81ZK0o0YfaL._AC_SL1500_.jpg" alt="Order History">
+      <p>Browse all your past purchases.</p>
+      <a href="#">View Orders</a>
+    </div>
+
+    <div class="card">
+      <h3>Payment Refund Status</h3>
+      <img src="https://m.media-amazon.com/images/I/51b5k2R0AHL._AC_SL1000_.jpg" alt="Refund Status">
+      <p>Check if your refund has been processed.</p>
+      <a href="#">Check Refund</a>
+    </div>
+  </div>
+
+</body>
+
+{% endblock %}

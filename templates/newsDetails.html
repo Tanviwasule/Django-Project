@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ newsDetails.title }}</h1>
+    <div>
+        {{ newsDetails.news_desc|safe }}
+    </div>
+    <div class="col-12" >
+        <img src="/media/
+        {{newsDetails.news_img}}"/>
+    </div>
+{% endblock %}

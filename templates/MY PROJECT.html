@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<marquee onmouseover="stop()" onmouseout="start()">
+    {% for news in newsData %}
+<a href="/newsDetails/{{news.id}}">
+    {{news.title}}  &nbsp;</a>
+    <!-- SALE IS LIVE NOW !! HURRY UP !! -->
+{% endfor %}</marquee>
+    <div class="hero-section"></div>
+  <form method="GET" action="" class="search-bar">
+    <input type="text" name="query" placeholder="Search services..." value="{{ query }}" class="search-input" />
+    <button type="submit" class="search-button">🔍 Search</button>
+</form>
+
+    <div class="shop-section">
+         {% for n in servicesData %}
+        <div class="{{n.service_icon}}">
+            <div class="box-content">
+                <h2>{{n.service_title}}</h2>
+        <div class="box-img" style="background-image: url('/static/amazon2.jpg');"></div>
+        <p>{{n.service_des}}</p>
+      
+            </div> 
+           
+        </div>  
+{% endfor %}
+        <!-- <div class="box2 box"><div class="box-content">
+            
+            <h2>Bluetooth Calling Smartwatch </h2>
+    <div class="box-img" style="background-image: url('/static/a3.jpg');"></div>
+
+    <p>Shop Now</p></div>
+</div>
+        <div class="box3 box"><div class="box-content">
+            <h2>Decorate your home according to you now</h2>
+    <div class="box-img" style="background-image: url('/static/af.jpg');"></div>
+    <p>Shop Now</p></div> </div>
+        <div class="box4 box"><div class="box-content">
+            <h2>Up to 45% off | Furniture that suits your home</h2>
+    <div class="box-img" style="background-image: url('/static/a10.jpg');"></div>
+    <p>Shop Now</p></div>
+    </div>
+    <div class="box5 box">
+        <div class="box-content">
+            <h2>School Bags</h2>
+    <div class="box-img" style="background-image: url('/static/abag.jpg');"></div>
+    <p>See more</p>
+        </div>
+    </div>
+    <div class="box6 box"><div class="box-content">
+        <h2>Jwellary</h2>
+<div class="box-img" style="background-image: url('/static/ajwellary.jpg');"></div>
+
+<p>Shop Now</p></div>
+</div>
+    <div class="box7 box"><div class="box-content">
+        <h2>Choclates</h2>
+<div class="box-img" style="background-image: url('/static/ac.jpg');"></div>
+<p>Shop Now</p></div> </div>
+    <div class="box8 box"><div class="box-content">
+        <h2>Earbuds</h2>
+<div class="box-img" style="background-image: url('/static/ab.jpg');"></div>
+<p>See more</p></div>
+</div> -->
+
+
+
+</div>
+
+
+
+
+ <div class="container">
+    <h2>Contact Us</h2>
+    <form action="#" method="POST" action="{% url 'contact' %}">
+        {% csrf_token %}
+      <div class="form-group">
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone *</label>
+        <input type="tel" id="phone" name="phone" required />
+      </div>
+
+      <div class="form-group">
+        <label for="website">Website</label>
+        <input type="url" id="website" name="website" placeholder="https://yourwebsite.com" />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+
+{% endblock %}
+
+
+
+
+

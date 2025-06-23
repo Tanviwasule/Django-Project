@@ -1,0 +1,34 @@
+<h2>Here is your Success Report </h2>
+<form method="POST">
+  {% csrf_token %}
+  <label>Enter marks for subject 1:</label>
+  <input type="text" name="num1" value="{{ n1 }}"><br><br>
+
+  <label>Enter marks for subject 2:</label>
+  <input type="text" name="num2" value="{{ n2 }}"><br><br> 
+
+
+   <label>Enter marks for subject 3:</label>
+  <input type="text" name="num3" value="{{ n3 }}"><br><br> 
+
+
+   <label>Enter marks for subject 4:</label>
+  <input type="text" name="num4" value="{{ n4 }}"><br><br> 
+
+
+
+   <label>Enter marks for subject 5:</label>
+  <input type="text" name="num5" value="{{ n5 }}"><br><br>
+
+
+  <button type="submit">calculate your result </button>
+  <br><br>
+<label>total marks:</label>
+  <input type="text" name="t" value="{{ t }}"><br><br>
+
+  <label>percentage</label>
+  <input type="text" name="p" value="{{ p }}"><br><br>
+<label>Division</label>
+  <input type="text" name="m" value="{{ m }}"><br><br>
+
+</form>

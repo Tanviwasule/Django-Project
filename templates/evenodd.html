@@ -1,0 +1,13 @@
+
+
+<h2>Check your number is even or odd</h2>
+<form method="post">
+  {% csrf_token %}
+  <label>Enter Number :</label>
+  <input type="text" name="num" value="{{ n }}"><br><br>
+
+   <button type="submit">CHECK</button>
+
+</form>
+
+<h3>Output: {{ t }}</h3>

@@ -1,0 +1,17 @@
+<section>
+<form method="post" action="{% url 'submitform' %}">
+  {% csrf_token %}
+  <h2>Sum of Two Numbers</h2>
+{{form}}
+  <!-- <label>Value1</label><br>
+  <input type="text" name="num1" value="{{n1}}"><br><br>
+
+  <label>Value2</label><br>
+  <input type="text" name="num2" value="{{n2}}"><br><br> -->
+
+  <button type="submit">Save</button>
+  <br><br>
+
+  Output: <input type="text" value="{{output}}" readonly>
+</form>
+</section>
